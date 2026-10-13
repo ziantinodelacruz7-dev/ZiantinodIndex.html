@@ -2,23 +2,25 @@
 <html>
 <head>
     <title>Portal Login</title>
-
     <style>
         body {
-            background-color: #f3e5f5;
+            background-color: #e3f2fd; /* Soft light blue background */
             font-family: Arial, sans-serif;
-            color: #4a148c;
+            color: #0d47a1; /* Deep blue text */
         }
 
         table {
-            border: 2px solid #8e44ad;
+            border: 2px solid #64b5f6;
             border-collapse: collapse;
             background-color: #ffffff;
             margin-top: 50px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border-radius: 8px;
+            overflow: hidden;
         }
 
         thead {
-            background-color: #4a148c;
+            background-color: #1976d2; /* Vibrant header blue */
             color: white;
             text-align: center;
         }
@@ -30,33 +32,60 @@
 
         tbody td {
             padding: 10px;
-            color: blue;
+            color: #1565c0;
         }
 
         input {
             padding: 7px;
-            border: 1px solid darkblue;
-            background-color: lightblue;
+            border: 1px solid #90caf9;
+            background-color: #f5f9ff;
+            border-radius: 4px;
         }
 
         tfoot td {
             padding: 10px;
             text-align: center;
-            color: #6a1b9a;
+            color: #1976d2;
         }
 
         input[type="submit"] {
-            background-color: darkblue;
+            background-color: #1976d2;
             color: white;
             border: none;
             padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #1565c0;
         }
 
         input[type="reset"] {
-            background-color: lightblur;
-            color: white;
+            background-color: #90caf9; /* Fixed typo from lightblur */
+            color: #0d47a1;
             border: none;
             padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type="reset"]:hover {
+            background-color: #64b5f6;
+        }
+
+        p {
+            text-align: center;
+        }
+
+        p a {
+            color: #1976d2;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        p a:hover {
+            text-decoration: underline;
         }
     </style>
 </head>
@@ -64,9 +93,7 @@
 <body>
 
     <form>
-
         <table align="center">
-
             <thead>
                 <tr>
                     <td colspan="2">
@@ -115,10 +142,9 @@
                     </td>
                 </tr>
             </tfoot>
-
         </table>
-
     </form>
-<p><a href="landingpage.html">Home</a></p>
+    
+    <p><a href="landingpage.html">Home</a></p>
 </body>
 </html>
