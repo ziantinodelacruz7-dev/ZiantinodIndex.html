@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Deep Blue Navigation Bar */
+header nav {
+    background-color: #0d47a1; /* Dark/Deep Blue background */
+    padding: 12px 0;
+    text-align: center;
+}
+
+header nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 6px 12px;
+    transition: 0.3s;
+}
+
+/* Light Blue highlight para sa Active Tab at Hover */
+header nav ul li a.active,
+header nav ul li a:hover {
+    background-color: #29b6f6; /* Light Blue background */
+    color: #0d47a1; /* Blue text para litaw */
+    border-radius: 4px;
+}
+
+/* Hero Section sa Home */
+.hero {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.hero h1 {
+    font-size: 28px;
+    margin-bottom: 5px;
+    color: #0d47a1;
+}
+
+.hero p {
+    font-size: 18px;
+    color: #555;
+}
+
+/* Links Styling sa Portfolio Page */
+main ul li a {
+    color: #0288d1;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+main ul li a:hover {
+    text-decoration: underline;
+    color: #01579b;
+}
