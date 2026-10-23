@@ -3,25 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabular Data</title>
-    <script src="StudentScript.js" defer></script>
+    <title>Students List - Ziantino Lao. Dela Cruz</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        table {
+            width: 90%;
+            margin: 20px auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: center;
+        }
+        th {
+            background-color: #0d47a1;
+            color: white;
+        }
+        img {
+            border-radius: 5px;
+            object-fit: cover;
+        }
+    </style>
 </head>
 <body>
-    <center>
-    <table border="2">
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Gallery</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h2 style="text-align: center; color: #0d47a1; margin-top: 20px;">Grade 12 Cooper Students</h2>
+
+    <table>
         <thead>
             <tr>
-                <th style="background-color: #4CAF50; color: white;">LRN</th>
-                <th style="background-color: #2196F3; color: white;">NAME</th>
-                <th style="background-color: #FF9800; color: white;">AGE</th>
-                <th style="background-color: #9C27B0; color: white;">SECTION</th>
-                <th style="background-color: #E91E63; color: white;">IMAGES</th>
+                <th>LRN</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Section</th>
+                <th>Image</th>
             </tr>
         </thead>
         <tbody id="output">
+            
         </tbody>
     </table>
-         <a href = "index.html"> Home </a>
-    </center>
+
+    <script src="student.js"></script>
 </body>
 </html>
