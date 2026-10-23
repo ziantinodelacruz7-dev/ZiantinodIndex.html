@@ -1,11 +1,11 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #f4f7f6;
 }
 
-/* Deep Blue Navigation Bar */
 header nav {
-    background-color: #0d47a1; /* Dark/Deep Blue background */
+    background-color: #004743;
     padding: 12px 0;
     text-align: center;
 }
@@ -24,19 +24,19 @@ header nav ul li a {
     text-decoration: none;
     font-size: 14px;
     font-weight: bold;
-    padding: 6px 12px;
+    padding: 8px 14px;
     transition: 0.3s;
 }
 
-/* Light Blue highlight para sa Active Tab at Hover */
+
 header nav ul li a.active,
 header nav ul li a:hover {
-    background-color: #29b6f6; /* Light Blue background */
-    color: #0d47a1; /* Blue text para litaw */
+    background-color: #e2f0fb;
+    color: #004743; 
     border-radius: 4px;
 }
 
-/* Hero Section sa Home */
+
 .hero {
     text-align: center;
     margin-top: 50px;
@@ -45,22 +45,65 @@ header nav ul li a:hover {
 .hero h1 {
     font-size: 28px;
     margin-bottom: 5px;
-    color: #0d47a1;
+    color: #004743;
 }
 
 .hero p {
-    font-size: 18px;
+    font-size: 16px;
     color: #555;
 }
 
-/* Links Styling sa Portfolio Page */
-main ul li a {
-    color: #0288d1;
-    text-decoration: none;
-    font-weight: bold;
+
+.portfolio-container {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
 }
 
-main ul li a:hover {
-    text-decoration: underline;
-    color: #01579b;
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.portfolio-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    background-color: #e2f0fb;
+    color: #004743;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: bold;
+    text-align: center;
+    padding: 10px;
+    
+   
+    border: 3px double #004743;
+    border-radius: 6px;
+    transition: all 0.2s ease-in-out;
+}
+
+.portfolio-card:hover {
+    background-color: #004743;
+    color: #ffffff;
+    border-color: #ffffff;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+@media (max-width: 900px) {
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 500px) {
+    .grid-container {
+        grid-template-columns: 1fr;
+    }
 }
