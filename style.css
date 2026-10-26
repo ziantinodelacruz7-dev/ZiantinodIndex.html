@@ -73,7 +73,7 @@ header nav ul li a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70px;
+    height: 20px;
     background-color: #e2f0fb;
     color: #004743;
     text-decoration: none;
@@ -81,11 +81,11 @@ header nav ul li a:hover {
     font-weight: bold;
     text-align: center;
     padding: 10px;
-    
-   
+    width: 50%;
     border: 3px double #004743;
     border-radius: 6px;
     transition: all 0.2s ease-in-out;
+    justify-content: center;
 }
 
 .portfolio-card:hover {
