@@ -5,6 +5,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Ziantino Lao. Dela Cruz</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+    * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+    .portfolio-card {
+        display: flex;
+        align-items: center;
+        height: 20px;
+        background-color: #e2f0fb;
+        color: #004743;
+        text-decoration: none;
+        font-size: 10px;
+        font-weight: bold;
+        text-align: center;
+        padding: 15px;
+        width: 100%;
+        border: 3px solid #004743;
+        border-radius: 6px;
+        transition: all 0.2s ease-in-out;
+        justify-content: center;
+    }
+
+    .portfolio-card:hover {
+        background-color: #004743;
+        color: #ffffff;
+        border-color: #ffffff;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+    }
+    .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, 180px);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 5px;
+    list-style: none;
+    padding: 20px;
+    width: 100%;
+    justify-content: center;
+    }
+
     </style>
 </head>
 <body>   
