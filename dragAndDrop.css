@@ -1,0 +1,41 @@
+h1 {
+    text-align: center;
+    color: black;
+}
+
+.draggableContainer {
+    text-align: center;
+    border: 1px solid rgb(77, 76, 155);
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.droppableContainer {
+    text-align: center;
+    border: 1px solid rgb(72, 140, 243);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.box, .droppable {
+    background-color: blue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 30px;
+    width: 120px;
+    margin-right: 5px;
+}
+
+.box {
+    cursor: grab;
+}
+
+.draggableFormat {
+    font-weight: bold;
+    color: rgb(98, 180, 245);
+    border: 5px dotted rgb(114, 185, 247);
+}
