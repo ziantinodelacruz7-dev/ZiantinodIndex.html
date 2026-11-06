@@ -4,66 +4,76 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>.NET Developer Profile - Grade 12 Cooper</title>
+    <!-- Import Inter Font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
         body {
-            background-color: #f9f9f9;
-            color: #111111;
+            background-color: #f8fafc; /* Soft Slate Background */
+            color: #0f172a; /* Deep Slate Text */
             min-height: 100vh;
             display: flex;
             flex-direction: column;
         }
 
+        /* Header & Navigation Styling */
         header {
             background-color: #ffffff;
-            color: #111111;
+            color: #0f172a;
             padding: 30px 20px;
             text-align: center;
-            border-bottom: 2px solid #111111;
+            border-bottom: 2px solid #e2e8f0;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
         }
 
         header h1 {
             font-size: 24px;
             font-weight: 700;
             text-transform: uppercase;
-            letter-spacing: 1px;
+            letter-spacing: 0.5px;
             margin-bottom: 8px;
+            color: #0f172a;
         }
 
         header p {
             font-size: 14px;
-            color: #666666;
+            color: #64748b; /* Soft Muted Slate */
             font-weight: 500;
         }
 
         nav {
-            background-color: #111111;
+            background-color: #ffffff;
             display: flex;
             justify-content: center;
-            padding: 10px;
+            padding: 12px;
+            border-bottom: 1px solid #e2e8f0;
+            gap: 8px;
         }
 
         nav a {
-            color: #ffffff;
+            color: #475569; /* Medium Slate */
             text-decoration: none;
-            padding: 6px 16px;
+            padding: 8px 16px;
             font-weight: 600;
             font-size: 13px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
-            transition: all 0.2s ease;
+            border-radius: 6px;
+            transition: all 0.2s ease-in-out;
         }
 
-        nav a:hover {
-            background-color: #ffffff;
-            color: #111111;
-            border-radius: 4px;
+        nav a:hover, nav a.active {
+            background-color: #4f46e5; /* Electric Indigo Accent */
+            color: #ffffff;
         }
 
         .container {
@@ -83,20 +93,21 @@
         aside {
             flex: 1;
             background-color: #ffffff;
-            padding: 20px;
-            border-radius: 6px;
-            border: 1px solid #111111;
-            box-shadow: 4px 4px 0px #111111;
+            padding: 24px;
+            border-radius: 8px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
             height: fit-content;
         }
 
         aside h3 {
-            font-size: 15px;
+            font-size: 14px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             margin-bottom: 12px;
-            border-bottom: 1px solid #eeeeee;
+            border-bottom: 1px solid #f1f5f9;
             padding-bottom: 8px;
+            color: #0f172a;
         }
 
         aside ul {
@@ -108,38 +119,39 @@
             padding: 6px 0;
             font-size: 13px;
             font-weight: 600;
-            color: #333333;
+            color: #334155;
         }
 
         article {
             background-color: #ffffff;
-            padding: 25px;
-            border-radius: 6px;
+            padding: 24px;
+            border-radius: 8px;
             margin-bottom: 20px;
-            border: 1px solid #111111;
-            box-shadow: 4px 4px 0px #111111;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
         }
 
         article h2 {
-            font-size: 18px;
+            font-size: 16px;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             margin-bottom: 12px;
-            border-bottom: 1px solid #eeeeee;
+            border-bottom: 1px solid #f1f5f9;
             padding-bottom: 8px;
+            color: #0f172a;
         }
 
         article p {
             font-size: 14px;
             line-height: 1.6;
-            color: #444444;
+            color: #475569;
         }
 
         footer {
-            background-color: #111111;
+            background-color: #0f172a; /* Deep Slate Footer */
             color: #ffffff;
             text-align: center;
-            padding: 15px;
+            padding: 20px;
             margin-top: auto;
             font-size: 13px;
             letter-spacing: 0.5px;
@@ -154,7 +166,7 @@
 </head>
 <body>
     <header>
-        <h1>Ziantino Lao. Dela Cruz | .NET Framework Developer</h1>
+        <h1>Ziantino Lao Dela Cruz | .NET Framework Developer</h1>
         <p>Grade 12 Cooper - Web Development Showcase</p>
     </header>
 
