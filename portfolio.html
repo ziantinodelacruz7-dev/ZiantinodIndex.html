@@ -4,90 +4,95 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Ziantino Lao. Dela Cruz</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Import Inter Font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
         body {
-            background-color: #f9f9f9;
-            color: #111111;
+            background-color: #f8fafc; /* Soft Slate Background */
+            color: #0f172a; /* Deep Slate Text */
             min-height: 100vh;
         }
 
         /* Header & Navigation Styling */
         header {
             background-color: #ffffff;
-            border-bottom: 2px solid #111111;
-            padding: 12px 0;
+            border-bottom: 2px solid #e2e8f0; /* Subtle Divider */
+            padding: 16px 0;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05); /* Soft Shadow */
         }
 
         nav ul {
             display: flex;
             justify-content: center;
-            gap: 20px;
+            gap: 12px;
             list-style: none;
         }
 
         nav a {
-            color: #111111;
+            color: #475569; /* Medium Slate */
             text-decoration: none;
             font-weight: 600;
             font-size: 14px;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            padding: 5px 10px;
+            letter-spacing: 0.5px;
+            padding: 8px 16px;
+            border-radius: 6px;
             transition: all 0.2s ease-in-out;
         }
 
         nav a:hover, nav a.active {
-            background-color: #111111;
+            background-color: #4f46e5; /* Electric Indigo Accent */
             color: #ffffff;
-            border-radius: 4px;
         }
 
-        /* Compact 4-Column Grid */
+        /* Grid Container */
         .grid-container {
             display: grid;
-            grid-template-columns: repeat(4, 180px);
-            grid-template-rows: repeat(4, 1fr);
-            gap: 6px; /* Reduced gap for a tighter layout */
+            grid-template-columns: repeat(4, 200px);
+            gap: 12px;
             list-style: none;
-            padding: 10px;
+            padding: 30px 10px;
             width: 100%;
             justify-content: center;
         }
 
-        /* Thinner Portfolio Card Styling */
+        /* Portfolio Card Styling */
         .portfolio-card {
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 45px; /* Reduced height to make it thinner */
+            min-height: 52px;
             background-color: #ffffff;
-            color: #111111;
+            color: #1e293b;
             text-decoration: none;
-            font-size: 10px;
-            font-weight: 700;
+            font-size: 11px;
+            font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 0.5px;
             text-align: center;
-            padding: 6px; /* Reduced padding */
-            border: 1px solid #111111; /* Thinner border (1px instead of 2px) */
-            border-radius: 4px;
+            padding: 8px 12px;
+            border: 1px solid #e2e8f0;
+            border-radius: 8px;
             transition: all 0.2s ease-in-out;
-            box-shadow: 1px 1px 0px #111111; /* Thinner shadow */
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
         }
 
         .portfolio-card:hover {
-            background-color: #111111;
+            background-color: #4f46e5; /* Electric Indigo */
             color: #ffffff;
-            transform: translate(-1px, -1px);
-            box-shadow: 2px 2px 0px #666666;
+            border-color: #4f46e5;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
         }
     </style>
 </head>
@@ -104,7 +109,7 @@
         </nav>
     </header>
 
-    <main style="padding: 10px;">
+    <main>
         <ul class="grid-container">
             <li><a href="form-elements.html" class="portfolio-card">Form Elements</a></li>
             <li><a href="calculator.html" class="portfolio-card">Sample Calculator</a></li>
