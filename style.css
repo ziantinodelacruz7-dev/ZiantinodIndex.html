@@ -1,21 +1,15 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* Soft gradient combining Royal Blue (#4169e1) and Deep Indigo (#1e1b4b) */
-    background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 50%, #3b82f6 100%);
-    background-attachment: fixed;
-    color: #f8fafc;
-    min-height: 100vh;
+    background-color: #f9f9f9;
+    color: #111111;
 }
 
 header nav {
-    /* Glassmorphism nav bar */
-    background: rgba(15, 23, 42, 0.75);
-    backdrop-filter: blur(10px);
-    border-bottom: 2px solid #4169e1;
+    background-color: #ffffff;
+    border-bottom: 2px solid #111111;
     padding: 15px 0;
     text-align: center;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
 
 header nav ul {
@@ -28,51 +22,39 @@ header nav ul {
 }
 
 header nav ul li a {
-    color: #cbd5e1;
+    color: #111111;
     text-decoration: none;
     font-size: 14px;
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 1px;
-    padding: 8px 16px;
-    border-radius: 6px;
-    transition: all 0.3s ease-in-out;
+    padding: 6px 12px;
+    transition: all 0.2s ease-in-out;
 }
 
 header nav ul li a.active,
 header nav ul li a:hover {
-    background-color: #4169e1;
+    background-color: #111111;
     color: #ffffff;
-    box-shadow: 0 0 12px rgba(65, 105, 225, 0.6);
+    border-radius: 4px;
 }
 
 .hero {
     text-align: center;
-    margin-top: 80px;
-    padding: 40px 20px;
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    /* Hero card translucent container */
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(8px);
-    border-radius: 12px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    margin-top: 50px;
+    padding: 0 20px;
 }
 
 .hero h1 {
-    font-size: 36px;
-    margin-bottom: 15px;
-    color: #ffffff;
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #111111;
     font-weight: 700;
     letter-spacing: -0.5px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero p {
-    font-size: 18px;
-    color: #93c5fd;
+    font-size: 16px;
+    color: #555555;
     font-weight: 400;
-    line-height: 1.6;
 }
