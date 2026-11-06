@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery Methods - Ziantino Lao Dela Cruz</title>
+    <!-- Import Inter Font from Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#b1").click(function () {
+                $("#box").animate({
+                    width: "300px"
+                });
+                $("#box").animate({
+                    height: "300px"
+                });
+            });
+
+            $("#b2").click(function () {
+                $("#d1").delay("slow").fadeIn();
+                $("#d2").delay("fast").fadeIn();
+                $("#d3").delay(1000).fadeIn();
+                $("#d4").delay(2000).fadeIn();
+            });
+
+            $(".btn1").click(function () {
+                $("#p1").slideUp();
+            });
+            $(".btn2").click(function () {
+                $("#p1").slideDown();
+            });
+
+            $(".b1").click(function () {
+                $("#p3").hide();
+            });
+            $(".b2").click(function () {
+                $("#p3").show();
+            });
+        });
+    </script>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        body {
+            background-color: #f8fafc; /* Soft Slate Background */
+            color: #0f172a; /* Deep Slate Text */
+            margin: 0;
+            padding: 30px 15px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        h2 {
+            color: #4f46e5;
+            font-weight: 600;
+            font-size: 16px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background-color: #4f46e5; /* Electric Indigo Accent */
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s ease-in-out;
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+        }
+
+        button:hover {
+            background-color: #4338ca;
+            transform: translateY(-1px);
+        }
+
+        #box {
+            width: 100px;
+            height: 100px;
+            background-color: #cbd5e1;
+            border-radius: 8px;
+            margin: 0 auto;
+        }
+
+        #b1 {
+            margin-top: 15px;
+        }
+
+        .section-box, #border, #border2, #hide {
+            background-color: #ffffff;
+            border-radius: 10px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.05);
+            margin: 20px auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #border {
+            width: 320px;
+            min-height: 120px;
+            padding: 20px;
+        }
+
+        #border2 {
+            width: 100%;
+            max-width: 400px;
+            min-height: 120px;
+            padding: 20px;
+        }
+
+        #hide {
+            width: 100%;
+            max-width: 400px;
+            min-height: 80px;
+            padding: 20px;
+            font-size: 18px;
+            font-weight: 600;
+            color: #334155;
+        }
+
+        p {
+            color: #475569;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        #p2 {
+            cursor: pointer;
+            color: #4f46e5;
+            font-weight: 600;
+        }
+
+        .fade-container {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin: 15px 0;
+        }
+
+        .fade-box {
+            width: 50px;
+            height: 50px;
+            border-radius: 6px;
+        }
+
+        .b1 {
+            margin: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="portfolio.html">
+        <h2>← Back to Home</h2>
+    </a>
+
+    <div style="margin-bottom: 30px; text-align: center;">
+        <div id="box"></div>
+        <button id="b1" style="margin-top: 15px;">Enlarge Box (Animate)</button>
+    </div>
+
+    <div style="text-align: center; margin-bottom: 30px;">
+        <button id="b2">Show Boxes (Fade In)</button>
+        <div class="fade-container">
+            <div id="d1" class="fade-box" style="display: none; background-color: #cbd5e1;"></div>
+            <div id="d2" class="fade-box" style="display: none; background-color: #94a3b8;"></div>
+            <div id="d3" class="fade-box" style="display: none; background-color: #818cf8;"></div>
+            <div id="d4" class="fade-box" style="display: none; background-color: #4f46e5;"></div>
+        </div>
+    </div>
+
+    <div id="border">
+        <p id="p1">This paragraph will get hidden.</p>
+        <div style="display: flex; gap: 8px;">
+            <button class="btn1">Slide up</button>
+            <button class="btn2">Slide down</button>
+        </div>
+    </div>
+
+    <div id="border2">
+        <p id="p2">
+            Click here: This paragraph will fade out!
+        </p>
+        <p>
+            This paragraph will not fade!
+        </p>
+
+        <script>
+            $("#p2").click(function () {
+                $(this).fadeTo("slow", 0.33);
+            });
+        </script>
+    </div>
+
+    <div id="hide">
+        <p id="p3" style="margin: 0;">Geek para msa Geeks!</p>
+    </div>
+    <div style="display: flex; gap: 8px;">
+        <button class="b1">Hide</button>
+        <button class="b2">Show</button>
+    </div>
+</body>
+
+</html>
