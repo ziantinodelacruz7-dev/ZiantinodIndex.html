@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Grade</title>
 </head>
 
 <body>
@@ -63,7 +63,7 @@
                 row.insertCell(3).textContent = grades[i].grade;
                 var actionCell = row.insertCell(4);
                 var editBtn = document.createElement('button');
-                editBtn.textContent = 'Edit';
+                editBtn.textContent = 'Update';
                 editBtn.onclick = (function(index) {
                     return function() {
                         editGrade(index);
