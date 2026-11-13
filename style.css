@@ -1,86 +1,136 @@
-/* Import Modern Web Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Ziantino Lao. Dela Cruz</title>
+    <!-- Link to your shared CSS file -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>   
+    <header>
+        <nav>
+            <ul>
+                <li><a href="landingpage.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="portfolio.html" class="active">Portfolio</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-:root {
-    --bg-base: #f8fafc;
-    --surface: #ffffff;
-    --text-main: #0f172a;
-    --text-muted: #64748b;
-    --border-subtle: #e2e8f0;
-    --accent: #4f46e5;
-    --accent-hover: #4338ca;
-    --accent-soft: rgba(79, 70, 229, 0.08);
-}
+    <main>
+        <section class="hero">
+            <span class="hero-badge">PROJECTS &amp; LABS</span>
+            <h1>My Development Portfolio</h1>
+            <p>A collection of web development exercises, JavaScript applications, UI layouts, and jQuery experiments.</p>
+        </section>
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-    background-color: var(--bg-base);
-    /* Sleek dot-matrix grid background design */
-    background-image: 
-        radial-gradient(at 50% 0%, rgba(79, 70, 229, 0.06) 0px, transparent 55%),
-        radial-gradient(#cbd5e1 1px, transparent 1px);
-    background-size: 100% 100%, 24px 24px;
-    color: var(--text-main);
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    line-height: 1.6;
-    -webkit-font-smoothing: antialiased;
-}
-
-/* Sticky Glassmorphism Navigation */
-header {
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    background-color: rgba(255, 255, 255, 0.9);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border-bottom: 1px solid var(--border-subtle);
-    padding: 16px 20px;
-}
-
-header nav ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 8px;
-}
-
-header nav ul li a {
-    display: inline-block;
-    color: var(--text-muted);
-    text-decoration: none;
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 13px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 0.6px;
-    padding: 9px 18px;
-    border-radius: 8px;
-    transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-header nav ul li a:hover {
-    color: var(--accent);
-    background-color: var(--accent-soft);
-}
-
-header nav ul li a.active {
-    background-color: var(--accent);
-    color: #ffffff;
-    box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
-}
-
-/* Hero Section (Name & Section) */
-.hero {
-    text-align: center;
-    max-width: 680px;
-    margin: 40px auto 2
+        <ul class="grid-container">
+            <li>
+                <a href="form-elements.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">01</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">Form Elements</span>
+                </a>
+            </li>
+            <li>
+                <a href="calculator.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">02</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">Sample Calculator</span>
+                </a>
+            </li>
+            <li>
+                <a href="discount.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">03</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">Discount Calculator</span>
+                </a>
+            </li>
+            <li>
+                <a href="schedule.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">04</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">Grade 12 Cooper Schedule</span>
+                </a>
+            </li>
+            <li>
+                <a href="portal-login.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">05</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">Student Portal</span>
+                </a>
+            </li>
+            <li>
+                <a href="studentsArray.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">06</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">Student Array Table</span>
+                </a>
+            </li>
+            <li>
+                <a href="gridOnDemo.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">07</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">CSS Grid Demo</span>
+                </a>
+            </li>
+            <li>
+                <a href="index.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">08</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">Login Logic</span>
+                </a>
+            </li>
+            <li>
+                <a href="scheduleStyle.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">09</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">Schedule Styled</span>
+                </a>
+            </li>
+            <li>
+                <a href="netDev.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">10</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">Net Developer Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="javaScript.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">11</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">JavaScript</span>
+                </a>
+            </li>
+            <li>
+                <a href="DragAndDrop.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">12</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">Drag &amp; Drop API</span>
+                </a>
+            </li>
+            <li>
+                <a href="DragAndDropG.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">13</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">Drag &amp; Drop Food Game</span>
+                </a>
+            </li>
+            <li>
+                <a href="tab.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">14</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">jQuery Tab</span>
+                </a>
+            </li>
+            <li>
+                <a href="carouselimage.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">15</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">Gallery</span>
+                </a>
+            </li>
+            <li>
+                <a href="jQuery.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">16</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">jQuery Method</span>
+                </a>
+            </li>      
+            <li>
+                <a href="Grade.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">17</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">Grade</span>
+                </a>
+            </li>
+        </ul>
+    </main>
+</body>
+</html>
