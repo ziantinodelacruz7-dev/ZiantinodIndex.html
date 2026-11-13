@@ -4,181 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Ziantino Lao. Dela Cruz</title>
-    <!-- Import Inter Font from Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-        }
-
-        body {
-            background-color: #f8fafc; /* Soft Slate Background */
-            color: #0f172a; /* Deep Slate Text */
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-        }
-
-        /* Header & Navigation Styling (Green Theme matching your image) */
-        header {
-            background-color: #064e3b; /* Dark Green Header Bar */
-            padding: 16px 0;
-        }
-
-        nav ul {
-            display: flex;
-            justify-content: center;
-            gap: 24px;
-            list-style: none;
-        }
-
-        nav a {
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 15px;
-            padding: 8px 16px;
-            border-radius: 4px;
-            transition: all 0.2s ease-in-out;
-        }
-
-        nav a:hover {
-            color: #fb923c;
-        }
-
-        nav a.active {
-            background-color: #047857;
-            border-bottom: 3px solid #fb923c;
-        }
-
-        /* Hero Name Section */
-        .hero-name {
-            text-align: center;
-            margin-top: 30px;
-            margin-bottom: 20px;
-        }
-
-        .hero-name h1 {
-            font-size: 28px;
-            font-weight: 700;
-            color: #0f172a;
-        }
-
-        .hero-name p {
-            font-size: 16px;
-            font-weight: 600;
-            color: #334155;
-            margin-top: 4px;
-        }
-
-        /* Main Content Area */
-        main {
-            flex: 1;
-        }
-
-        /* Grid Container */
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(4, 200px);
-            gap: 12px;
-            list-style: none;
-            padding: 20px 10px 40px;
-            width: 100%;
-            justify-content: center;
-        }
-
-        /* Portfolio Card Styling */
-        .portfolio-card {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            min-height: 52px;
-            background-color: #ffffff;
-            color: #1e293b;
-            text-decoration: none;
-            font-size: 11px;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            text-align: center;
-            padding: 8px 12px;
-            border: 1px solid #e2e8f0;
-            border-radius: 8px;
-            transition: all 0.2s ease-in-out;
-            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
-        }
-
-        .portfolio-card:hover {
-            background-color: #4f46e5; /* Electric Indigo */
-            color: #ffffff;
-            border-color: #4f46e5;
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
-        }
-
-        /* Footer Stay Connected Section */
-        footer {
-            background-color: #eefdf5; /* Light soft green tint */
-            border-top: 1px solid #d1fae5;
-            padding: 30px 50px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            margin-top: auto;
-        }
-
-        .footer-left {
-            max-width: 600px;
-        }
-
-        .footer-left h3 {
-            font-size: 18px;
-            color: #064e3b;
-            font-weight: 700;
-            margin-bottom: 6px;
-        }
-
-        .footer-left p {
-            font-size: 12px;
-            color: #475569;
-            line-height: 1.5;
-        }
-
-        .footer-right {
-            text-align: right;
-        }
-
-        .footer-right h4 {
-            font-size: 14px;
-            color: #0f172a;
-            margin-bottom: 8px;
-        }
-
-        .social-icons {
-            display: flex;
-            gap: 16px;
-            justify-content: flex-end;
-            align-items: center;
-        }
-
-        .social-icons a {
-            text-decoration: none;
-            color: #064e3b;
-            font-weight: bold;
-            font-size: 16px;
-            transition: color 0.2s;
-        }
-
-        .social-icons a:hover {
-            color: #4f46e5;
-        }
-    </style>
+    <!-- Link to your shared CSS file -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>   
     <header>
@@ -193,46 +20,117 @@
         </nav>
     </header>
 
-    <div class="hero-name">
-        <h1>Ziantino Lao. Dela Cruz</h1>
-        <p>12-Cooper</p>
-    </div>
-
     <main>
+        <section class="hero">
+            <span class="hero-badge">PROJECTS &amp; LABS</span>
+            <h1>My Development Portfolio</h1>
+            <p>A collection of web development exercises, JavaScript applications, UI layouts, and jQuery experiments.</p>
+        </section>
+
         <ul class="grid-container">
-            <li><a href="form-elements.html" class="portfolio-card">Form Elements</a></li>
-            <li><a href="calculator.html" class="portfolio-card">Sample Calculator</a></li>
-            <li><a href="discount.html" class="portfolio-card">Discount Calculator</a></li>
-            <li><a href="schedule.html" class="portfolio-card">Grade 12 Cooper Schedule</a></li>
-            <li><a href="portal-login.html" class="portfolio-card">Student Portal</a></li>
-            <li><a href="studentsArray.html" class="portfolio-card">Student Array Table</a></li>
-            <li><a href="gridOnDemo.html" class="portfolio-card">CSS Grid Demo</a></li>
-            <li><a href="index.html" class="portfolio-card">Login Logic</a></li>
-            <li><a href="scheduleStyle.html" class="portfolio-card">Schedule Styled</a></li>
-            <li><a href="netDev.html" class="portfolio-card">Net Developer Profile</a></li>
-            <li><a href="javaScript.html" class="portfolio-card">JavaScript</a></li>
-            <li><a href="DragAndDrop.html" class="portfolio-card">Drag & Drop API</a></li>
-            <li><a href="DragAndDropG.html" class="portfolio-card">Drag & Drop Food Game</a></li>
-            <li><a href="tab.html" class="portfolio-card">J-query Tab</a></li>
-            <li><a href="carouselimage.html" class="portfolio-card">GALLERY</a></li>
-            <li><a href="jQuery.html" class="portfolio-card">J QUERY METHOD</a></li>      
-            <li><a href="Grade.html" class="portfolio-card">Grade</a></li>
+            <li>
+                <a href="form-elements.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">01</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">Form Elements</span>
+                </a>
+            </li>
+            <li>
+                <a href="calculator.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">02</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">Sample Calculator</span>
+                </a>
+            </li>
+            <li>
+                <a href="discount.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">03</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">Discount Calculator</span>
+                </a>
+            </li>
+            <li>
+                <a href="schedule.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">04</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">Grade 12 Cooper Schedule</span>
+                </a>
+            </li>
+            <li>
+                <a href="portal-login.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">05</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">Student Portal</span>
+                </a>
+            </li>
+            <li>
+                <a href="studentsArray.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">06</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">Student Array Table</span>
+                </a>
+            </li>
+            <li>
+                <a href="gridOnDemo.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">07</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">CSS Grid Demo</span>
+                </a>
+            </li>
+            <li>
+                <a href="index.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">08</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">Login Logic</span>
+                </a>
+            </li>
+            <li>
+                <a href="scheduleStyle.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">09</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">Schedule Styled</span>
+                </a>
+            </li>
+            <li>
+                <a href="netDev.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">10</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">Net Developer Profile</span>
+                </a>
+            </li>
+            <li>
+                <a href="javaScript.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">11</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">JavaScript</span>
+                </a>
+            </li>
+            <li>
+                <a href="DragAndDrop.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">12</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">Drag &amp; Drop API</span>
+                </a>
+            </li>
+            <li>
+                <a href="DragAndDropG.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">13</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">Drag &amp; Drop Food Game</span>
+                </a>
+            </li>
+            <li>
+                <a href="tab.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">14</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">jQuery Tab</span>
+                </a>
+            </li>
+            <li>
+                <a href="carouselimage.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">15</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">Gallery</span>
+                </a>
+            </li>
+            <li>
+                <a href="jQuery.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">16</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">jQuery Method</span>
+                </a>
+            </li>      
+            <li>
+                <a href="Grade.html" class="portfolio-card">
+                    <div class="card-top"><span class="card-index">17</span><span class="card-arrow">↗</span></div>
+                    <span class="card-title">Grade</span>
+                </a>
+            </li>
         </ul>
     </main>
-
-    <footer>
-        <div class="footer-left">
-            <h3>Stay Connected!</h3>
-            <p>"Thank you for checking out my portfolio projects. Feel free to reach out via social media or connect with me for future tech collaborations and student inquiries. Your continuous support means a lot!"</p>
-        </div>
-        <div class="footer-right">
-            <h4>Follow Me</h4>
-            <div class="social-icons">
-                <a href="https://facebook.com" target="_blank" title="Facebook">f</a>
-                <a href="https://youtube.com" target="_blank" title="YouTube">▶</a>
-                <a href="https://instagram.com" target="_blank" title="Instagram">ig</a>
-            </div>
-        </div>
-    </footer>
 </body>
 </html>
