@@ -3,29 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery - Ziantino lao. Dela Cruz</title>
+    <title>Gallery - Ziantino Lao. Dela Cruz</title>
     <link rel="stylesheet" href="style.css">
     
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
-    <!-- Carousel Styles -->
+    <!-- Carousel Styles Matching Reference Size & Your Design System -->
     <style>
+        .carousel-wrapper {
+            width: 100%;
+            max-width: 720px; /* Matches the wide rectangular size in the reference */
+            margin: 24px auto 40px;
+            padding: 0 20px;
+        }
+
         .carousel {
             position: relative;
             width: 100%;
-            max-width: 450px; /* Reduced width to fit portrait images better */
-            margin: 20px auto;
-            background: #fff;
-            border-radius: 8px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            background: var(--surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 12px;
+            box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
             overflow: hidden;
         }
         
         .slides {
             position: relative;
-            height: 550px; /* Tall enough to fit portrait images cleanly */
+            height: 450px; /* Tall landscape proportion matching the reference */
             width: 100%;
+            background-color: #0f172a; /* Clean dark backdrop for portrait/landscape photos */
         }
 
         .slide {
@@ -44,70 +51,88 @@
 
         .slide img {
             width: 100%;
-            height: 470px; /* Fits portrait aspect ratios perfectly */
-            object-fit: contain; /* Shows the full image without cropping */
+            height: 100%;
+            object-fit: contain; /* Keeps your portrait photos uncropped inside the wide frame */
             display: block;
-            background: #fafafa; /* Subtle background for portrait spacing */
         }
 
+        /* Sleek Overlay Caption Bar at the bottom of the image */
         figcaption {
-            padding: 12px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            padding: 12px 16px;
             text-align: center;
-            background: #fff;
-            color: #555;
-            font-size: 1rem;
+            background: rgba(15, 23, 42, 0.72);
+            backdrop-filter: blur(4px);
+            color: #ffffff;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
             font-weight: 500;
+            letter-spacing: 0.3px;
         }
         
+        /* Navigation Arrows */
         .nav {
             position: absolute;
-            top: 42%;
+            top: 50%;
             transform: translateY(-50%);
-            background: rgba(0, 0, 0, 0.5);
-            color: white;
+            background: rgba(15, 23, 42, 0.55);
+            color: #ffffff;
             border: none;
-            font-size: 1.5rem;
-            padding: 10px 15px;
+            font-size: 18px;
+            width: 38px;
+            height: 38px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             cursor: pointer;
             z-index: 10;
-            border-radius: 4px;
-            transition: background 0.3s ease;
+            border-radius: 8px;
+            transition: all 0.2s ease;
         }
 
         .nav:hover {
-            background: rgba(0, 0, 0, 0.8);
+            background: var(--accent);
         }
 
         .prev {
-            left: 10px;
+            left: 14px;
         }
 
         .next {
-            right: 10px;
+            right: 14px;
         }
         
+        /* Clean Dots Below the Image Box */
         .dots {
             display: flex;
             justify-content: center;
             gap: 8px;
-            padding: 12px;
-            background: #fff;
-            border-top: 1px solid #eee;
+            margin-top: 16px;
         }
 
         .dot {
-            width: 12px;
-            height: 12px;
+            width: 10px;
+            height: 10px;
             border-radius: 50%;
             border: none;
-            background: #ccc;
+            background: #cbd5e1;
             cursor: pointer;
-            transition: background 0.3s ease;
+            transition: all 0.25s ease;
             padding: 0;
         }
 
         .dot.active {
-            background: #333;
+            background: var(--accent);
+            transform: scale(1.2);
+        }
+
+        @media (max-width: 600px) {
+            .slides {
+                height: 340px;
+            }
         }
     </style>
 </head>
@@ -126,31 +151,33 @@
     </header>
 
     <main class="hero">
-        <h1>Gallery:</h1>
+        <h1>Welcome to my Photo Gallery!</h1>
         
-        <!-- Carousel Image Code Inserted Here -->
-        <div class="carousel" id="carousel">
-            <div class="slides">
-                <figure class="slide">
-                    <img src="pic1.JPG" alt="Portrait photo 1">
-                    <figcaption>Caption for image 1</figcaption>
-                </figure>
-                <figure class="slide">
-                    <img src="pic2.JPG" alt="Portrait photo 2">
-                    <figcaption>Caption for image 2</figcaption>
-                </figure>
-                <figure class="slide">
-                    <img src="pic3.JPG" alt="Portrait photo 3">
-                    <figcaption>Caption for image 3</figcaption>
-                </figure>
-                <figure class="slide">
-                    <img src="pic4.JPG" alt="Portrait photo 4">
-                    <figcaption>Caption for image 4</figcaption>
-                </figure>
+        <div class="carousel-wrapper">
+            <div class="carousel" id="carousel">
+                <div class="slides">
+                    <figure class="slide">
+                        <img src="pic1.JPG" alt="Photo 1">
+                        <figcaption>Caption for image 1</figcaption>
+                    </figure>
+                    <figure class="slide">
+                        <img src="pic2.JPG" alt="Photo 2">
+                        <figcaption>Caption for image 2</figcaption>
+                    </figure>
+                    <figure class="slide">
+                        <img src="pic3.JPG" alt="Photo 3">
+                        <figcaption>Caption for image 3</figcaption>
+                    </figure>
+                    <figure class="slide">
+                        <img src="pic4.JPG" alt="Photo 4">
+                        <figcaption>Caption for image 4</figcaption>
+                    </figure>
 
-                <button class="nav prev" type="button" aria-label="Previous slide">&#10094;</button>
-                <button class="nav next" type="button" aria-label="Next slide">&#10095;</button>
+                    <button class="nav prev" type="button" aria-label="Previous slide">&#10094;</button>
+                    <button class="nav next" type="button" aria-label="Next slide">&#10095;</button>
+                </div>
             </div>
+            <!-- Dots positioned cleanly underneath the frame -->
             <div class="dots"></div>
         </div>
     </main>
