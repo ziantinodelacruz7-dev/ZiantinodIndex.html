@@ -114,25 +114,26 @@ main {
     line-height: 1.6;
 }
 
-/* 4-Column Portfolio Grid Sizing (Updated to match reference layout proportions) */
+/* 4-Column Portfolio Grid (Restored Larger Box Proportions) */
 .grid-container {
     list-style: none;
-    max-width: 1050px;
+    max-width: 1150px;
     margin: 40px auto;
     padding: 0 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
+    gap: 20px;
 }
 
 .grid-container li:last-child {
-    grid-column: 2 / 4;
+    grid-column: 1 / -1;
     display: flex;
     justify-content: center;
 }
 
 .grid-container li:last-child .portfolio-card {
     width: 100%;
+    max-width: calc(25% - 15px);
 }
 
 .portfolio-card {
@@ -142,23 +143,23 @@ main {
     text-align: center;
     background-color: var(--surface);
     border: 1px solid var(--border-subtle);
-    border-radius: 8px;
-    padding: 18px 12px;
-    min-height: 55px;
+    border-radius: 12px;
+    padding: 32px 18px; /* Restored generous card padding */
+    min-height: 110px;   /* Restored taller card height */
     text-decoration: none;
     color: var(--text-main);
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 13px;
+    font-size: 14px;
     font-weight: 700;
-    box-shadow: 0 2px 5px rgba(15, 23, 42, 0.02);
+    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
     transition: all 0.2s ease;
 }
 
 .portfolio-card:hover {
     border-color: var(--accent);
     color: var(--accent);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 15px rgba(79, 70, 229, 0.1);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.12);
 }
 
 /* Uniform Footer */
@@ -237,8 +238,8 @@ footer {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
     }
-    .grid-container li:last-child {
-        grid-column: 1 / -1;
+    .grid-container li:last-child .portfolio-card {
+        max-width: calc(50% - 10px);
     }
 }
 
@@ -246,8 +247,8 @@ footer {
     .grid-container {
         grid-template-columns: 1fr;
     }
-    .grid-container li:last-child {
-        grid-column: 1 / -1;
+    .grid-container li:last-child .portfolio-card {
+        max-width: 100%;
     }
     footer {
         padding: 24px 20px;
