@@ -15,6 +15,56 @@
             $( "#tabs" ).tabs();
         } );
     </script>
+
+    <!-- Custom Styling to Match Your Clean Aesthetic -->
+    <style>
+        #tabs {
+            max-width: 750px !important;
+            margin: 40px auto !important;
+            font-family: 'Inter', sans-serif;
+            border: 1px solid var(--border-subtle) !important;
+            border-radius: 12px !important;
+            background: var(--surface) !important;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+        #tabs .ui-tabs-nav {
+            background: #f1f5f9 !important;
+            padding: 12px 12px 0 12px !important;
+            border-top-left-radius: 12px;
+            border-top-right-radius: 12px;
+            border-bottom: 1px solid var(--border-subtle) !important;
+        }
+        #tabs .ui-tabs-nav li {
+            margin: 0 8px 0 0 !important;
+            border: none !important;
+            background: transparent !important;
+        }
+        #tabs .ui-tabs-nav li a {
+            font-family: 'Plus Jakarta Sans', sans-serif !important;
+            font-size: 15px !important;
+            font-weight: 700 !important;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 12px 24px !important;
+            border-radius: 8px !important;
+            color: var(--text-muted) !important;
+            background: #ffffff !important;
+            border: 1px solid var(--border-subtle) !important;
+            transition: all 0.2s ease;
+        }
+        #tabs .ui-tabs-nav li.ui-tabs-active a {
+            background-color: var(--accent) !important;
+            color: #ffffff !important;
+            border-color: var(--accent) !important;
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
+        }
+        #tabs .ui-tabs-panel {
+            padding: 30px !important;
+            font-size: 16px !important;
+            color: var(--text-main) !important;
+            line-height: 1.6;
+        }
+    </style>
 </head>
 <body>
 
@@ -31,21 +81,24 @@
     </header>
 
     <main class="hero">
-        
-        <div id="tabs" style="max-width: 600px; width: 100%; margin: 30px auto; text-align: left;">
+        <h1>About:</h1>
+        <p>- Ziantino Lao. Dela Cruz Grade 12 Cooper Student</p>
+
+        <!-- jQuery UI Tabs Container -->
+        <div id="tabs">
             <ul>
-                <li><a href="#tabs-1">Ziantino</a></li>
+                <li><a href="#tabs-1">Zhinn</a></li>
                 <li><a href="#tabs-2">Hobbies</a></li>
                 <li><a href="#tabs-3">Favorite Food</a></li>
             </ul>
             <div id="tabs-1">
-                <p>Ziantino is a Grade 12 Student in Governor Juanito Reyes Remulla Senior High School</p>
+                <p>Zhinn is a Grade 12 Student in Governor Juanito Reyes Remulla Senior High School</p>
             </div>
             <div id="tabs-2">
-                <p>Ziantino always playing Basketball and Online games like MOBA game</p>
+                <p>Zhinn always playing Basketball and Online games like MOBA game</p>
             </div>
             <div id="tabs-3">
-                <p>Ziantino favorite food is Adobong manok here grandmother specialty</p>
+                <p>Zhinn favorite food is Adobong manok here grandmother specialty</p>
             </div>
         </div>
     </main>
@@ -54,6 +107,7 @@
         <div class="footer-left">
             <h3>Stay Connected!</h3>
             <p>"Thank you for visiting my website. Connect with me on social media or reach out for collaborations and inquiries. Your support and feedback are greatly appreciated."</p>
+            <p style="margin-top: 8px; font-size: 11px;">&copy; 2026 All Rights Reserved | Designed by : Ziantino Lao. Dela Cruz</p>
         </div>
         <div class="footer-right">
             <h4>Follow Me</h4>
