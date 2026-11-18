@@ -18,9 +18,6 @@
 
 body {
     background-color: var(--bg-main);
-    /* Re-enabled dot-matrix background pattern */
-    background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
-    background-size: 24px 24px;
     color: var(--text-main);
     font-family: 'Inter', sans-serif;
     min-height: 100vh;
@@ -117,48 +114,56 @@ main {
     line-height: 1.6;
 }
 
-/* 4-Column Portfolio Grid Matching Your Original Image Sizing */
+/* 4-Column Portfolio Grid Sizing */
 .grid-container {
     list-style: none;
-    max-width: 1100px;
+    max-width: 1050px;
     margin: 40px auto;
     padding: 0 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 18px;
+    gap: 16px;
 }
 
-/* Standard left-aligned items layout for the final row */
+/* Center the final 3 items on the bottom row */
+.grid-container li:nth-last-child(3) {
+    grid-column: 1 / 2;
+    margin-left: 50%;
+}
+.grid-container li:nth-last-child(2) {
+    grid-column: 2 / 3;
+    margin-left: 16.66%;
+}
 .grid-container li:last-child {
-    grid-column: auto;
-    display: block;
+    grid-column: 3 / 4;
+    margin-left: -16.66%;
 }
 
+/* Exact Card Size Proportions */
 .portfolio-card {
     display: flex;
     align-items: center;
-    justify-content: flex-start; /* Left-aligned text inside cards as seen in your image */
-    text-align: left;
+    justify-content: center;
+    text-align: center;
     background-color: var(--surface);
     border: 1px solid var(--border-subtle);
-    border-radius: 12px;
-    padding: 24px 20px;
-    min-height: 95px; /* Taller card proportions */
+    border-radius: 8px;
+    padding: 16px 14px;
+    min-height: 52px;
     text-decoration: none;
     color: var(--text-main);
     font-family: 'Plus Jakarta Sans', sans-serif;
     font-size: 13px;
     font-weight: 700;
-    letter-spacing: 0.3px;
-    box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
+    box-shadow: 0 2px 5px rgba(15, 23, 42, 0.02);
     transition: all 0.2s ease;
 }
 
 .portfolio-card:hover {
     border-color: var(--accent);
     color: var(--accent);
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(79, 70, 229, 0.12);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 15px rgba(79, 70, 229, 0.1);
 }
 
 /* Uniform Footer */
@@ -236,6 +241,12 @@ footer {
 @media (max-width: 900px) {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
+    }
+    .grid-container li:nth-last-child(3),
+    .grid-container li:nth-last-child(2),
+    .grid-container li:last-child {
+        margin-left: 0;
+        grid-column: auto;
     }
 }
 
