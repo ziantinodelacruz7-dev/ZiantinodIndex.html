@@ -114,7 +114,7 @@ main {
     line-height: 1.6;
 }
 
-/* 4-Column Portfolio Grid (Restored Larger Box Proportions) */
+/* 4-Column Portfolio Grid */
 .grid-container {
     list-style: none;
     max-width: 1150px;
@@ -144,8 +144,8 @@ main {
     background-color: var(--surface);
     border: 1px solid var(--border-subtle);
     border-radius: 12px;
-    padding: 32px 18px; /* Restored generous card padding */
-    min-height: 110px;   /* Restored taller card height */
+    padding: 32px 18px;
+    min-height: 110px;
     text-decoration: none;
     color: var(--text-main);
     font-family: 'Plus Jakarta Sans', sans-serif;
