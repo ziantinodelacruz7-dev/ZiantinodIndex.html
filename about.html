@@ -12,57 +12,72 @@
     <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
     <script>
         $( function() {
-            $( "#tabs" ).tabs();
+            $( "#accordion" ).accordion({
+                heightStyle: "content",
+                collapsible: true
+            });
         } );
     </script>
 
-    <!-- Custom Styling to Match Your Clean Aesthetic -->
+    <!-- Custom Accordion Styling Matching Your Design System -->
     <style>
-        #tabs {
-            max-width: 750px !important;
-            margin: 40px auto !important;
+        #accordion {
+            max-width: 650px;
+            width: 100%;
+            margin: 30px auto;
+            text-align: left;
             font-family: 'Inter', sans-serif;
-            border: 1px solid var(--border-subtle) !important;
-            border-radius: 12px !important;
-            background: var(--surface) !important;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
         }
-        #tabs .ui-tabs-nav {
-            background: #f1f5f9 !important;
-            padding: 12px 12px 0 12px !important;
-            border-top-left-radius: 12px;
-            border-top-right-radius: 12px;
-            border-bottom: 1px solid var(--border-subtle) !important;
-        }
-        #tabs .ui-tabs-nav li {
-            margin: 0 8px 0 0 !important;
-            border: none !important;
-            background: transparent !important;
-        }
-        #tabs .ui-tabs-nav li a {
-            font-family: 'Plus Jakarta Sans', sans-serif !important;
-            font-size: 15px !important;
-            font-weight: 700 !important;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-            padding: 12px 24px !important;
-            border-radius: 8px !important;
-            color: var(--text-muted) !important;
-            background: #ffffff !important;
-            border: 1px solid var(--border-subtle) !important;
+
+        /* Accordion Header Bars */
+        #accordion .ui-accordion-header {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 15px;
+            font-weight: 700;
+            padding: 14px 20px;
+            margin-top: 6px;
+            border-radius: 8px;
+            background-color: var(--surface);
+            color: var(--text-main);
+            border: 1px solid var(--border-subtle);
+            box-shadow: 0 2px 6px rgba(15, 23, 42, 0.03);
             transition: all 0.2s ease;
+            outline: none;
         }
-        #tabs .ui-tabs-nav li.ui-tabs-active a {
-            background-color: var(--accent) !important;
-            color: #ffffff !important;
-            border-color: var(--accent) !important;
+
+        #accordion .ui-accordion-header:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+        }
+
+        /* Active Open Header */
+        #accordion .ui-accordion-header.ui-state-active {
+            background-color: var(--accent);
+            color: #ffffff;
+            border-color: var(--accent);
+            border-bottom-left-radius: 0;
+            border-bottom-right-radius: 0;
             box-shadow: 0 4px 12px rgba(79, 70, 229, 0.25);
         }
-        #tabs .ui-tabs-panel {
-            padding: 30px !important;
-            font-size: 16px !important;
-            color: var(--text-main) !important;
+
+        /* Make the arrow icon white when active */
+        #accordion .ui-accordion-header.ui-state-active .ui-icon {
+            filter: brightness(0) invert(1);
+        }
+
+        /* Accordion Content Box (Tall & Spacious like the reference) */
+        #accordion .ui-accordion-content {
+            background-color: var(--surface);
+            color: var(--text-muted);
+            border: 1px solid var(--border-subtle);
+            border-top: none;
+            border-bottom-left-radius: 8px;
+            border-bottom-right-radius: 8px;
+            padding: 28px 24px;
+            min-height: 180px;
+            font-size: 15px;
             line-height: 1.6;
+            box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
         }
     </style>
 </head>
@@ -83,21 +98,21 @@
     <main class="hero">
         <h1>About:</h1>
 
-        <!-- jQuery UI Tabs Container -->
-        <div id="tabs">
-            <ul>
-                <li><a href="#tabs-1">Zhinn</a></li>
-                <li><a href="#tabs-2">Hobbies</a></li>
-                <li><a href="#tabs-3">Favorite Food</a></li>
-            </ul>
-            <div id="tabs-1">
-                <p>Zhinn is a Grade 12 Student in Governor Juanito Reyes Remulla Senior High School</p>
+        <!-- jQuery UI Accordion Container -->
+        <div id="accordion">
+            <h3>Zhinn</h3>
+            <div>
+                <p>Zhinn is a Grade 12 Student in Governor Juanito Reyes Remulla Senior High School.</p>
             </div>
-            <div id="tabs-2">
-                <p>Zhinn always playing Basketball and Online games like MOBA game</p>
+
+            <h3>Hobbies</h3>
+            <div>
+                <p>Zhinn always playing Basketball and Online games like MOBA game.</p>
             </div>
-            <div id="tabs-3">
-                <p>Zhinn favorite food is Adobong manok here grandmother specialty</p>
+
+            <h3>Favorite Food</h3>
+            <div>
+                <p>Zhinn favorite food is Adobong manok, her grandmother's specialty.</p>
             </div>
         </div>
     </main>
