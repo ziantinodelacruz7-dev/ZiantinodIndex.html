@@ -18,6 +18,9 @@
 
 body {
     background-color: var(--bg-main);
+    /* Re-enabled dot-matrix background pattern */
+    background-image: radial-gradient(#cbd5e1 1px, transparent 1px);
+    background-size: 24px 24px;
     color: var(--text-main);
     font-family: 'Inter', sans-serif;
     min-height: 100vh;
@@ -114,43 +117,39 @@ main {
     line-height: 1.6;
 }
 
-/* 4-Column Portfolio Grid */
+/* 4-Column Portfolio Grid Matching Your Original Image Sizing */
 .grid-container {
     list-style: none;
-    max-width: 1150px;
+    max-width: 1100px;
     margin: 40px auto;
     padding: 0 20px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
+    gap: 18px;
 }
 
+/* Standard left-aligned items layout for the final row */
 .grid-container li:last-child {
-    grid-column: 1 / -1;
-    display: flex;
-    justify-content: center;
-}
-
-.grid-container li:last-child .portfolio-card {
-    width: 100%;
-    max-width: calc(25% - 15px);
+    grid-column: auto;
+    display: block;
 }
 
 .portfolio-card {
     display: flex;
     align-items: center;
-    justify-content: center;
-    text-align: center;
+    justify-content: flex-start; /* Left-aligned text inside cards as seen in your image */
+    text-align: left;
     background-color: var(--surface);
     border: 1px solid var(--border-subtle);
     border-radius: 12px;
-    padding: 32px 18px;
-    min-height: 110px;
+    padding: 24px 20px;
+    min-height: 95px; /* Taller card proportions */
     text-decoration: none;
     color: var(--text-main);
     font-family: 'Plus Jakarta Sans', sans-serif;
-    font-size: 14px;
+    font-size: 13px;
     font-weight: 700;
+    letter-spacing: 0.3px;
     box-shadow: 0 2px 8px rgba(15, 23, 42, 0.03);
     transition: all 0.2s ease;
 }
@@ -238,17 +237,11 @@ footer {
     .grid-container {
         grid-template-columns: repeat(2, 1fr);
     }
-    .grid-container li:last-child .portfolio-card {
-        max-width: calc(50% - 10px);
-    }
 }
 
 @media (max-width: 600px) {
     .grid-container {
         grid-template-columns: 1fr;
-    }
-    .grid-container li:last-child .portfolio-card {
-        max-width: 100%;
     }
     footer {
         padding: 24px 20px;
