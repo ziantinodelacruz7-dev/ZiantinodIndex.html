@@ -79,6 +79,16 @@
             line-height: 1.6;
             box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
         }
+
+        /* Bullet Point List Styling inside Accordion */
+        #accordion .ui-accordion-content ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+
+        #accordion .ui-accordion-content ul li {
+            margin-bottom: 8px;
+        }
     </style>
 </head>
 <body>
@@ -87,7 +97,7 @@
         <nav>
             <ul>
                 <li><a href="landingpage.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
+                <li><a href="about.html" class="active">About</a></li>
                 <li><a href="gallery.html">Gallery</a></li>
                 <li><a href="portfolio.html">Portfolio</a></li>
                 <li><a href="contact.html">Contact</a></li>
@@ -98,19 +108,31 @@
     <main class="hero">
         <!-- jQuery UI Accordion Container -->
         <div id="accordion">
-            <h3>Zhinn</h3>
+            <h3>About Me</h3>
             <div>
-                <p>Zhinn is a Grade 12 Student in Governor Juanito Reyes Remulla Senior High School.</p>
+                <p>Ziantino is a Grade 12 Student in Governor Juanito Reyes Remulla Senior High School.</p>
             </div>
 
             <h3>Hobbies</h3>
             <div>
-                <p>Zhinn always playing Basketball and Online games like MOBA game.</p>
+                <ul>
+                    <li>Gaming</li>
+                    <li>Watching movie</li>
+                    <li>Watching series</li>
+                    <li>Playing basketball</li>
+                </ul>
             </div>
 
-            <h3>Favorite Food</h3>
+            <h3>Favorite Band</h3>
             <div>
-                <p>Zhinn favorite food is Adobong manok, her grandmother's specialty.</p>
+                <ul>
+                    <li>The Smiths</li>
+                    <li>The Beatles</li>
+                    <li>Radiohead</li>
+                    <li>Bleachers</li>
+                    <li>Queen</li>
+                    <li>The Cure</li>
+                </ul>
             </div>
         </div>
     </main>
