@@ -5,6 +5,55 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact - Ziantino Lao. Dela Cruz</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        .contact-page-container {
+            max-width: 700px;
+            margin: 40px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .contact-page-container h1 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 28px;
+            font-weight: 800;
+            color: var(--text-main);
+            margin-bottom: 30px;
+        }
+
+        .info-card {
+            background-color: var(--surface);
+            border: 1px solid var(--border-subtle);
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin-bottom: 20px;
+            text-align: left;
+            box-shadow: 0 2px 6px rgba(15, 23, 42, 0.02);
+            transition: all 0.2s ease;
+        }
+
+        .info-card:hover {
+            border-color: var(--accent);
+            box-shadow: 0 6px 15px rgba(79, 70, 229, 0.08);
+        }
+
+        .info-label {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            font-size: 11px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            color: var(--text-muted);
+            margin-bottom: 6px;
+        }
+
+        .info-value {
+            font-family: 'Inter', sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+    </style>
 </head>
 <body>
 
@@ -20,8 +69,28 @@
         </nav>
     </header>
 
-    <main class="hero">
-        
+    <main class="contact-page-container">
+        <h1>Contact Page</h1>
+
+        <div class="info-card">
+            <div class="info-label">Email Address</div>
+            <div class="info-value">ziantinodelacruz7@gmail.com</div>
+        </div>
+
+        <div class="info-card">
+            <div class="info-label">Facebook Name</div>
+            <div class="info-value">Ziantino Lao. Dela Cruz</div>
+        </div>
+
+        <div class="info-card">
+            <div class="info-label">Phone Number</div>
+            <div class="info-value">09754405079</div>
+        </div>
+
+        <div class="info-card">
+            <div class="info-label">Address</div>
+            <div class="info-value">Manggahan Allenville Kawit Cavite</div>
+        </div>
     </main>
 
     <footer>
