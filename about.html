@@ -23,18 +23,18 @@
     <style>
         .about-wrapper {
             max-width: 1000px;
-            margin: 40px auto;
+            margin: 50px auto;
             padding: 0 20px;
             display: flex;
-            align-items: flex-start;
+            align-items: center;
             justify-content: center;
-            gap: 40px;
+            gap: 45px;
             flex-wrap: wrap;
         }
 
         #accordion {
             flex: 1;
-            min-width: 300px;
+            min-width: 320px;
             max-width: 600px;
             text-align: left;
             font-family: 'Inter', sans-serif;
@@ -85,10 +85,14 @@
             border-bottom-left-radius: 8px;
             border-bottom-right-radius: 8px;
             padding: 28px 24px;
-            min-height: 180px;
+            min-height: 200px;
             font-size: 15px;
-            line-height: 1.6;
+            line-height: 1.7;
             box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
+        }
+
+        #accordion .ui-accordion-content p {
+            margin-bottom: 14px;
         }
 
         /* Bullet Point List Styling inside Accordion */
@@ -101,16 +105,15 @@
             margin-bottom: 8px;
         }
 
-        /* Profile Picture Card on the Right */
+        /* Tall Portrait Picture Card matching the reference proportion */
         .profile-photo-box {
-            width: 280px;
+            width: 260px;
             text-align: center;
-            margin-top: 6px;
         }
 
         .profile-photo-box img {
             width: 100%;
-            height: auto;
+            height: 360px;
             border-radius: 12px;
             border: 1px solid var(--border-subtle);
             box-shadow: 0 6px 18px rgba(15, 23, 42, 0.08);
@@ -145,13 +148,14 @@
         <div id="accordion">
             <h3>About Me</h3>
             <div>
-                <p>Ziantino is a Grade 12 Student in Governor Juanito Reyes Remulla Senior High School.</p>
+                <p>Hey, Hi, Hello! My name is Ziantino Lao. Dela Cruz, currently studying as a Grade 12 Senior High School student under the TVL-ICT strand (Section Cooper) at Governor Juanito Reyes Remulla Senior High School.</p>
+                <p>I am passionate about web development, creative coding, and building interactive projects[cite: 4]. Outside of school and coding, I enjoy playing basketball, gaming, watching movies and series, and listening to my favorite rock and indie bands[cite: 1].</p>
             </div>
 
             <h3>Hobbies</h3>
             <div>
                 <ul>
-                    <li>Gaming</li>
+                    <li>Gaming[cite: 1]</li>
                     <li>Watching movie</li>
                     <li>Watching series</li>
                     <li>Playing basketball</li>
@@ -171,7 +175,7 @@
             </div>
         </div>
 
-        <!-- Right Side: Profile Picture & Caption -->
+        <!-- Right Side: Portrait Profile Picture & Caption -->
         <div class="profile-photo-box">
             <img src="pic1.JPG" alt="Ziantino Lao. Dela Cruz">
             <p class="profile-caption">Me Grade 12 TVL ICT</p>
