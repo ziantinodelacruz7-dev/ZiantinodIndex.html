@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gallery - Ziantino Lao. Dela Cruz</title>
     <link rel="stylesheet" href="style.css">
-    
+
     <!-- jQuery CDN -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 
@@ -27,10 +28,11 @@
             box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.08);
             overflow: hidden;
         }
-        
+
         .slides {
             position: relative;
-            height: 450px;
+            /* 4:3 Aspect Ratio calculation (720px width * 3 / 4 = 540px height) */
+            height: 540px;
             width: 100%;
             background-color: #0f172a;
         }
@@ -42,7 +44,7 @@
             width: 100%;
             height: 100%;
             margin: 0;
-            display: none; 
+            display: none;
         }
 
         .slide:first-child {
@@ -72,7 +74,7 @@
             font-weight: 500;
             letter-spacing: 0.3px;
         }
-        
+
         /* Navigation Arrows */
         .nav {
             position: absolute;
@@ -104,7 +106,7 @@
         .next {
             right: 14px;
         }
-        
+
         /* Clean Dots Below the Image Box */
         .dots {
             display: flex;
@@ -131,11 +133,12 @@
 
         @media (max-width: 600px) {
             .slides {
-                height: 340px;
+                height: 380px;
             }
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -155,15 +158,15 @@
             <div class="carousel" id="carousel">
                 <div class="slides">
                     <figure class="slide">
-                        <img src="pic1.JPG" alt="Photo 1">
+                        <img src="pic2.JPG" alt="Photo 1">
                         <figcaption>Caption for image 1</figcaption>
                     </figure>
                     <figure class="slide">
-                        <img src="pic2.JPG" alt="Photo 2">
+                        <img src="pic3.JPG" alt="Photo 2">
                         <figcaption>Caption for image 2</figcaption>
                     </figure>
                     <figure class="slide">
-                        <img src="pic3.JPG" alt="Photo 3">
+                        <img src="pic4.JPG" alt="Photo 3">
                         <figcaption>Caption for image 3</figcaption>
                     </figure>
                     <figure class="slide">
@@ -182,8 +185,10 @@
     <footer>
         <div class="footer-left">
             <h3>Stay Connected!</h3>
-            <p>"Thank you for visiting my website. Connect with me on social media or reach out for collaborations and inquiries. Your support and feedback are greatly appreciated."</p>
-            <p style="margin-top: 8px; font-size: 11px;">&copy; 2026 All Rights Reserved | Designed by : Ziantino Lao. Dela Cruz</p>
+            <p>"Thank you for visiting my website. Connect with me on social media or reach out for collaborations and
+                inquiries. Your support and feedback are greatly appreciated."</p>
+            <p style="margin-top: 8px; font-size: 11px;">&copy; 2026 All Rights Reserved | Designed by : Ziantino Lao.
+                Dela Cruz</p>
         </div>
         <div class="footer-right">
             <h4>Follow Me</h4>
@@ -203,7 +208,7 @@
             let currentIndex = 0;
             let timer = null;
             const intervalTime = 4000;
-            
+
             $slides.each(function (index) {
                 const $dot = $('<button class="dot" type="button" aria-label="Slide ' + (index + 1) + '"></button>');
                 if (index === 0) $dot.addClass('active');
@@ -211,7 +216,7 @@
             });
 
             const $dots = $('.dot');
-            
+
             function showSlide(index) {
                 currentIndex = (index + totalSlides) % totalSlides;
                 $slides.stop(true, true).fadeOut(400);
@@ -220,7 +225,7 @@
             }
 
             function startAutoplay() {
-                stopAutoplay(); 
+                stopAutoplay();
                 timer = setInterval(function () {
                     showSlide(currentIndex + 1);
                 }, intervalTime);
@@ -255,7 +260,7 @@
             });
 
             startAutoplay();
-            
+
             $('#carousel').on('mouseenter', stopAutoplay).on('mouseleave', startAutoplay);
 
             $(document).on('keydown', function (e) {
@@ -270,4 +275,5 @@
         });
     </script>
 </body>
+
 </html>
