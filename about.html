@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,12 +12,12 @@
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
     <script src="https://code.jquery.com/ui/1.14.2/jquery-ui.js"></script>
     <script>
-        $( function() {
-            $( "#accordion" ).accordion({
+        $(function () {
+            $("#accordion").accordion({
                 heightStyle: "content",
                 collapsible: true
             });
-        } );
+        });
     </script>
 
     <!-- Custom Layout & Accordion Styling -->
@@ -84,25 +85,15 @@
             border-top: none;
             border-bottom-left-radius: 8px;
             border-bottom-right-radius: 8px;
-            padding: 28px 24px;
-            min-height: 200px;
+            padding: 24px 24px;
+            min-height: 150px;
             font-size: 15px;
             line-height: 1.7;
             box-shadow: 0 4px 15px rgba(15, 23, 42, 0.04);
         }
 
         #accordion .ui-accordion-content p {
-            margin-bottom: 14px;
-        }
-
-        /* Bullet Point List Styling inside Accordion */
-        #accordion .ui-accordion-content ul {
-            list-style-type: disc;
-            padding-left: 20px;
-        }
-
-        #accordion .ui-accordion-content ul li {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
         }
 
         /* Right Side Profile Card */
@@ -166,6 +157,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -181,38 +173,42 @@
     </header>
 
     <main class="about-wrapper">
-        
+        <!-- Left Side: Formal Four-Tab jQuery UI Accordion -->
         <div id="accordion">
             <h3>About Me</h3>
             <div>
-                <p>Hello! My name is Ziantino Lao. Dela Cruz, currently studying as a Grade 12 Senior High School student under the TVL-ICT strand (Section Cooper) at Governor Juanito Reyes Remulla Senior High School.</p>
-                <p>I am passionate about web development, creative coding, and building interactive projects. Outside of school and coding, I enjoy playing basketball, gaming, watching movies and series, and listening to my favorite rock and indie bands.</p>
+                <p>My name is Ziantino Lao. Dela Cruz, a Grade 12 Senior High School student specializing in the TVL-ICT
+                    strand (Section Cooper) at Governor Juanito Reyes Remulla Senior High School. I am dedicated to
+                    developing clean, responsive web applications while continuously expanding my technical foundation
+                    in modern software design.</p>
             </div>
 
-            <h3>Hobbies</h3>
+            <h3>Technical Skills & Projects</h3>
             <div>
-                <ul>
-                    <li>Gaming</li>
-                    <li>Watching movie</li>
-                    <li>Watching series</li>
-                    <li>Playing basketball</li>
-                </ul>
+                <p>My current portfolio encompasses responsive multi-page website architecture, scalable vector graphics
+                    (SVG) compositions, interactive HTML5 Canvas animations, and dynamic user interface components.
+                    Through these projects, I actively work with core web technologies including HTML5, CSS3,
+                    JavaScript, and jQuery UI to build structured and engaging digital experiences.</p>
             </div>
 
-            <h3>Favorite Band</h3>
+            <h3>Recreational Interests</h3>
             <div>
-                <ul>
-                    <li>The Smiths</li>
-                    <li>The Beatles</li>
-                    <li>Radiohead</li>
-                    <li>Bleachers</li>
-                    <li>Queen</li>
-                    <li>The Cure</li>
-                </ul>
+                <p>Beyond my academic coursework and programming drills, I maintain an active lifestyle by playing
+                    basketball with peers to build teamwork and discipline. During my leisure hours, I also enjoy
+                    strategic gaming alongside watching thought-provoking films and television series that inspire
+                    creative storytelling.</p>
+            </div>
+
+            <h3>Future Goals & Vision</h3>
+            <div>
+                <p>As I prepare to transition from Senior High School into higher education, my primary objective is to
+                    pursue a degree in Computer Science or Information Technology to master full-stack software
+                    engineering. I aspire to build scalable, user-centered digital solutions that solve real-world
+                    problems while continuously contributing to innovative tech communities.</p>
             </div>
         </div>
 
-        
+        <!-- Right Side: Styled Profile Card -->
         <div class="profile-card">
             <div class="profile-image-wrapper">
                 <img src="pic1.JPG" alt="Ziantino Lao. Dela Cruz">
@@ -230,8 +226,10 @@
     <footer>
         <div class="footer-left">
             <h3>Stay Connected!</h3>
-            <p>"Thank you for visiting my website. Connect with me on social media or reach out for collaborations and inquiries. Your support and feedback are greatly appreciated."</p>
-            <p style="margin-top: 8px; font-size: 11px;">&copy; 2026 All Rights Reserved | Designed by : Ziantino Lao. Dela Cruz</p>
+            <p>"Thank you for visiting my website. Connect with me on social media or reach out for collaborations and
+                inquiries. Your support and feedback are greatly appreciated."</p>
+            <p style="margin-top: 8px; font-size: 11px;">&copy; 2026 All Rights Reserved | Designed by : Ziantino Lao.
+                Dela Cruz</p>
         </div>
         <div class="footer-right">
             <h4>Follow Me</h4>
@@ -244,4 +242,5 @@
     </footer>
 
 </body>
+
 </html>
